@@ -165,7 +165,7 @@ h1 {
 }
 
 .home-content p {
-    font-size: 1rem;
+    font-size: 2rem;
     color: #7f8c8d;
     line-height: 1.6;
     max-width: 500px;
@@ -274,4 +274,11 @@ h2 {
 .badge {
     font-size: 1.2rem;
     padding: 10px 15px;
+}
+
+.card-span  {
+    color: rgb(23, 141, 150); /* Color de acento */
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 18px;
 }
