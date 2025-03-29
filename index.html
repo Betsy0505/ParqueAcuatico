@@ -26,6 +26,7 @@
       <a href="#info">Información</a>
       <a href="#costos">Costos</a>
       <a href="#formulario">Formulario</a>
+      <a href="#login" style="font-size: 20px; color: rgb(66, 177, 177);"><span style="color: rgb(71, 184, 184);">Ingresar</span></a>
     </nav>
   </header>
 
@@ -375,7 +376,77 @@
 
   <section class="formulario" id="formulario">
     <div class="div-form">
-      <h1>Compra de <span>boletos</span></h1>
+        <h1>Compra de <span>boletos</span> y servicios</h1>
+
+        <!-- Acordeón para Entrada al parque -->
+        <div class="accordion">
+            <button class="accordion-btn">Entrada al parque</button>
+            <div class="panel">
+                <h2>Entrada adulto ($180):</h2>
+                <input type="number" id="adulto" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_adulto">$0</label>
+
+                <h2>Entrada niño ($120):</h2>
+                <input type="number" id="niño" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_niño">$0</label>
+            </div>
+        </div>
+
+        <!-- Acordeón para Extras -->
+        <div class="accordion">
+            <button class="accordion-btn">Extras</button>
+            <div class="panel">
+                <h2>Silla ($30):</h2>
+                <input type="number" id="silla" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_silla">$0</label>
+
+                <h2>Mesa ($50):</h2>
+                <input type="number" id="mesa" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_mesa">$0</label>
+
+                <h2>Sombrilla ($50):</h2>
+                <input type="number" id="sombrilla" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_sombrilla">$0</label>
+            </div>
+        </div>
+
+        <!-- Acordeón para Espacios -->
+        <div class="accordion">
+            <button class="accordion-btn">Espacios</button>
+            <div class="panel">
+                <h2>Espacio para casa de campaña por noche ($350):</h2>
+                <input type="number" id="espacio_casa" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_espacio_casa">$0</label>
+
+                <h2>Renta casa campaña 4 personas ($150):</h2>
+                <input type="number" id="casa_4p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_casa_4p">$0</label>
+
+                <h2>Renta casa campaña 8 personas ($180):</h2>
+                <input type="number" id="casa_8p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_casa_8p">$0</label>
+
+                <h2>Renta casa campaña 12 personas ($220):</h2>
+                <input type="number" id="casa_12p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_casa_12p">$0</label>
+
+                <!-- Cabañas -->
+                <h2>Cabaña para 4 personas ($2500):</h2>
+                <input type="number" id="cabana_4p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_cabana_4p">$0</label>
+
+                <h2>Cabaña para 6 personas ($3000):</h2>
+                <input type="number" id="cabana_6p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
+                <label id="total_cabana_6p">$0</label>
+            </div>
+        </div>
+
+        <!-- Resultado total -->
+        <h3>Total: <span id="total_general">$0</span></h3>
+
+        <!-- Botón de compra -->
+        <button type="submit">Realizar Compra</button>
     </div>
-  </section>
+</section>
+
 </html>
