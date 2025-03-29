@@ -1,254 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <title>Parque acuático</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Parque acuático</title>
+  </head>
 
-    <header class="header">
-        <a href="#home" class="logo">Parque
-        <span>Acuático</span></a>
+  <header class="header">
+    <a href="#home" class="logo">Parque <span>Acuático</span></a>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
+    <i class="bx bx-menu" id="menu-icon"></i>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Inicio</a>
-            <a href="#info">Información</a>
-            <a href="#costos">Costos</a>
-            <a href="#formulario">Formulario</a>
-        </nav>
-    </header>
+    <nav class="navbar">
+      <a href="#home" class="active">Inicio</a>
+      <a href="#info">Información</a>
+      <a href="#costos">Costos</a>
+      <a href="#formulario">Formulario</a>
+    </nav>
+  </header>
 
-    <section class="home" id="home">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/resources/img1.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="/resources/img2.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/resources/img3.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/resources/img4.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/resources/img5.jpeg" class="d-block w-100" alt="...">
-            </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-            </button>
+  <section class="home" id="home">
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/resources/img1.jpeg" class="d-block w-100" alt="..." />
         </div>
-    </section>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/resources/img2.jpeg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="/resources/img3.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="/resources/img4.jpeg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="/resources/img5.jpeg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
 
-    <section class="home" id="info">
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Alberca <span>Infantil</span></h1>
-            <p>Piscina diseñada para niños, con poca profundidad y ambiente seguro.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Alberca <span>Familiar</span></h1>
-            <p>Espacio ideal para disfrutar en familia, con áreas aptas para todas las edades.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Alberca <span>de olas con toboganes</span></h1>
-            <p>Diversión acuática con olas artificiales y emocionantes toboganes.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Lago <span>natural</span></h1>
-            <p>Hermoso cuerpo de agua natural, perfecto para relajarse y admirar el paisaje.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Cabañas <span>para 4 personas</span></h1>
-            <p>Alojamiento acogedor con comodidades para una estancia confortable en familia o amigos.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Cabañas <span>para 6 personas</span></h1>
-            <p>Espaciosas cabañas equipadas para grupos más grandes, ideales para el descanso.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Áreas <span>de camping</span></h1>
-            <p>Zonas habilitadas para acampar al aire libre y disfrutar de la naturaleza.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Estacionamiento</h1>
-            <p>Espacio amplio y seguro para vehículos de los visitantes.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Servicio <span>médico</span></h1>
-            <p>Atención disponible para emergencias y primeros auxilios.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Regaderas</h1>
-            <p>Instalaciones con agua corriente para refrescarse y mantenerse limpio.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Seguridad <span>las 24 Hrs.</span></h1>
-            <p>Atención disponible para emergencias y primeros auxilios.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Asadores</h1>
-            <p>Espacios equipados para preparar parrilladas y disfrutar de comidas al aire libre.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    
-        <div class="home-content">
-            <img class="img" src="/resources/albercaInf.jpg">
-            <h1>Áreas <span>verdes</span></h1>
-            <p>Espacios naturales ideales para descansar y convivir en un entorno relajante.</p>
-        </div>
-    
-        <div class="home-content">
-            <h1>Renta <span>de casas de campaña</span></h1>
-            <p>Disponibilidad de tiendas de campaña para quienes prefieren acampar sin llevar su propio equipo.</p>
-            <img class="img" src="/resources/albercafam.jpeg">
-        </div>
-    </section>   
+  <section class="home" id="info">
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Alberca <span>Infantil</span></h1>
+      <p>
+        Piscina diseñada para niños, con poca profundidad y ambiente seguro.
+      </p>
+    </div>
 
-    <section class="home" id="costos">
-        <h1>Costos</h1>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/espacio.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Espacio para casa de campaña por noche<br><span class="card-span">$350</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/casa.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Renta de casa de campaña para 4 personas<br><span class="card-span">$150</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Renta de casa de campaña para 8 personas<br><span class="card-span">$180</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Renta de casa de campaña para 12 personas<br><span class="card-span">$220</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Cabaña para 4 personas<br><span class="card-span">$2500</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Cabaña para 6 personas<br><span class="card-span">$3000</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Silla<br><span class="card-span">$30</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Mesa<br><span class="card-span">$50</span></p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="resources/compañera-perfecta.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Sombrilla<br><span class="card-span">$50</span></p>
-                        </div>
-                    </div>
-                </div>
+    <div class="home-content">
+      <h1>Alberca <span>Familiar</span></h1>
+      <p>
+        Espacio ideal para disfrutar en familia, con áreas aptas para todas las
+        edades.
+      </p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Alberca <span>de olas con toboganes</span></h1>
+      <p>Diversión acuática con olas artificiales y emocionantes toboganes.</p>
+    </div>
+
+    <div class="home-content">
+      <h1>Lago <span>natural</span></h1>
+      <p>
+        Hermoso cuerpo de agua natural, perfecto para relajarse y admirar el
+        paisaje.
+      </p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Cabañas <span>para 4 personas</span></h1>
+      <p>
+        Alojamiento acogedor con comodidades para una estancia confortable en
+        familia o amigos.
+      </p>
+    </div>
+
+    <div class="home-content">
+      <h1>Cabañas <span>para 6 personas</span></h1>
+      <p>
+        Espaciosas cabañas equipadas para grupos más grandes, ideales para el
+        descanso.
+      </p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Áreas <span>de camping</span></h1>
+      <p>
+        Zonas habilitadas para acampar al aire libre y disfrutar de la
+        naturaleza.
+      </p>
+    </div>
+
+    <div class="home-content">
+      <h1>Estacionamiento</h1>
+      <p>Espacio amplio y seguro para vehículos de los visitantes.</p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Servicio <span>médico</span></h1>
+      <p>Atención disponible para emergencias y primeros auxilios.</p>
+    </div>
+
+    <div class="home-content">
+      <h1>Regaderas</h1>
+      <p>
+        Instalaciones con agua corriente para refrescarse y mantenerse limpio.
+      </p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Seguridad <span>las 24 Hrs.</span></h1>
+      <p>Atención disponible para emergencias y primeros auxilios.</p>
+    </div>
+
+    <div class="home-content">
+      <h1>Asadores</h1>
+      <p>
+        Espacios equipados para preparar parrilladas y disfrutar de comidas al
+        aire libre.
+      </p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+
+    <div class="home-content">
+      <img class="img" src="/resources/albercaInf.jpg" />
+      <h1>Áreas <span>verdes</span></h1>
+      <p>
+        Espacios naturales ideales para descansar y convivir en un entorno
+        relajante.
+      </p>
+    </div>
+
+    <div class="home-content">
+      <h1>Renta <span>de casas de campaña</span></h1>
+      <p>
+        Disponibilidad de tiendas de campaña para quienes prefieren acampar sin
+        llevar su propio equipo.
+      </p>
+      <img class="img" src="/resources/albercafam.jpeg" />
+    </div>
+  </section>
+
+  <section class="home" id="costos">
+    <h1>Costos</h1>
+    <br />
+    <div class="container">
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img src="resources/espacio.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Espacio para casa de campaña por noche<br /><span
+                  class="card-span"
+                  >$350</span
+                >
+              </p>
             </div>
+          </div>
         </div>
 
-        <br>
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img src="resources/casa.jpeg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Renta de casa de campaña para 4 personas<br /><span
+                  class="card-span"
+                  >$150</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/casa8.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Renta de casa de campaña para 8 personas<br /><span
+                  class="card-span"
+                  >$180</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/casa12.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Renta de casa de campaña para 12 personas<br /><span
+                  class="card-span"
+                  >$220</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/cabañapeque.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Cabaña para 4 personas<br /><span class="card-span">$2500</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/cabañamedia.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Cabaña para 6 personas<br /><span class="card-span">$3000</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/silla.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Silla<br /><span class="card-span">$30</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/mesa.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Mesa<br /><span class="card-span">$50</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="resources/som.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Sombrilla<br /><span class="card-span">$50</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
     <h2><span>Entrada al parque por persona</span></h2>
     <ol class="list-group list-group-numbered pricing-list">
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Adulto</div>
-            </div>
-            <span class="badge bg-primary rounded-pill">$180</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Niño</div>
-            </div>
-            <span class="badge bg-primary rounded-pill">$120</span>
-        </li>
-    </ol>
-
-</section>
-
-    <section class="formulario" id="formulario">
-        <div class="div-form">
-            <h1>Compra de <span>boletos</span></h1>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Adulto</div>
         </div>
-    </section>
+        <span class="badge bg-primary rounded-pill">$180</span>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Niño</div>
+        </div>
+        <span class="badge bg-primary rounded-pill">$120</span>
+      </li>
+    </ol>
+  </section>
+
+  <section class="formulario" id="formulario">
+    <div class="div-form">
+      <h1>Compra de <span>boletos</span></h1>
+    </div>
+  </section>
 </html>
