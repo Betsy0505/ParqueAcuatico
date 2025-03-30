@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <title>Parque acuático</title>
   </head>
 
@@ -29,6 +30,8 @@
       <a href="#login" style="font-size: 20px; color: rgb(66, 177, 177);"><span style="color: rgb(71, 184, 184);">Ingresar</span></a>
     </nav>
   </header>
+
+  <body>
 
   <section class="home" id="home">
     <div
@@ -375,78 +378,139 @@
   </section>
 
   <section class="formulario" id="formulario">
-    <div class="div-form">
-        <h1>Compra de <span>boletos</span> y servicios</h1>
+    <div class="container mt-4">
+        <h2 class="mb-4 display-5">Formulario de Compra</h2>
+        <div class="accordion" id="formAccordion" style="font-size: 1.2rem;">
+            
+            <!-- Acordeón para EntradasSSSSsssSsSSss -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                        Entradas
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#formAccordion">
+                    <div class="accordion-body">
+                        <form>
+                            <div class="mb-3">
+                              <h3>Entradas al parque por persona:</h3>
+                                <label for="adulto" class="form-label fs-5">Adulto - $180</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="adulto" placeholder="Cantidad" data-precio="180">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="niño" class="form-label fs-5">Niño - $120</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="niño" placeholder="Cantidad" data-precio="120">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Acordeón para Cosas ExtrasSsSsSSSssss -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        Cosas Extras
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#formAccordion">
+                    <div class="accordion-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="silla" class="form-label fs-5">Silla - $30</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="silla" placeholder="Cantidad" data-precio="30">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
 
-        <!-- Acordeón para Entrada al parque -->
-        <div class="accordion">
-            <button class="accordion-btn">Entrada al parque</button>
-            <div class="panel">
-                <h2>Entrada adulto ($180):</h2>
-                <input type="number" id="adulto" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_adulto">$0</label>
+                                <label for="mesa" class="form-label fs-5">Mesa - $50</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="mesa" placeholder="Cantidad" data-precio="50">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
 
-                <h2>Entrada niño ($120):</h2>
-                <input type="number" id="niño" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_niño">$0</label>
+                                <label for="sombrilla" class="form-label fs-5">Sombrilla - $50</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="sombrilla" placeholder="Cantidad" data-precio="50">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Acordeón para EspaciosSSSsSSSssssSSS -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Espacios
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#formAccordion">
+                    <div class="accordion-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="espacio1" class="form-label fs-5">Espacio para casa de campaña por noche - $350</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="espacio1" placeholder="Cantidad" data-precio="350">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+
+                                <label for="espacio2" class="form-label fs-5">Renta de casa de campaña para 4 personas - $150</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="espacio2" placeholder="Cantidad" data-precio="150">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+
+                                <label for="espacio3" class="form-label fs-5">Renta de casa de campaña para 8 personas - $180</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="espacio3" placeholder="Cantidad" data-precio="180">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+
+                                <label for="espacio4" class="form-label fs-5">Renta de casa de campaña para 12 personas - $220</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="espacio4" placeholder="Cantidad" data-precio="220">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+
+                                <label for="espacio5" class="form-label fs-5">Cabaña para 4 personas - $2500</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="espacio5" placeholder="Cantidad" data-precio="2500">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+
+                                <label for="espacio6" class="form-label fs-5">Cabaña para 6 personas - $3000</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="number" class="form-control form-control-lg calcular" id="espacio6" placeholder="Cantidad" data-precio="3000">
+                                    <span class="fs-5 subtotal">$0</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total GeneralLLLLLLLLL -->
+            <div class="mt-4 p-3 bg-light rounded">
+                <h3 class="text-end">Total: <span id="totalGeneral">$0</span></h3>
+            </div>
+            
+            <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-primary btn-lg fs-4 py-3" type="button">Realizar compra</button>
             </div>
         </div>
-
-        <!-- Acordeón para Extras -->
-        <div class="accordion">
-            <button class="accordion-btn">Extras</button>
-            <div class="panel">
-                <h2>Silla ($30):</h2>
-                <input type="number" id="silla" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_silla">$0</label>
-
-                <h2>Mesa ($50):</h2>
-                <input type="number" id="mesa" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_mesa">$0</label>
-
-                <h2>Sombrilla ($50):</h2>
-                <input type="number" id="sombrilla" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_sombrilla">$0</label>
-            </div>
-        </div>
-
-        <!-- Acordeón para Espacios -->
-        <div class="accordion">
-            <button class="accordion-btn">Espacios</button>
-            <div class="panel">
-                <h2>Espacio para casa de campaña por noche ($350):</h2>
-                <input type="number" id="espacio_casa" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_espacio_casa">$0</label>
-
-                <h2>Renta casa campaña 4 personas ($150):</h2>
-                <input type="number" id="casa_4p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_casa_4p">$0</label>
-
-                <h2>Renta casa campaña 8 personas ($180):</h2>
-                <input type="number" id="casa_8p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_casa_8p">$0</label>
-
-                <h2>Renta casa campaña 12 personas ($220):</h2>
-                <input type="number" id="casa_12p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_casa_12p">$0</label>
-
-                <!-- Cabañas -->
-                <h2>Cabaña para 4 personas ($2500):</h2>
-                <input type="number" id="cabana_4p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_cabana_4p">$0</label>
-
-                <h2>Cabaña para 6 personas ($3000):</h2>
-                <input type="number" id="cabana_6p" min="0" placeholder="Cantidad" oninput="calcularTotal()" />
-                <label id="total_cabana_6p">$0</label>
-            </div>
-        </div>
-
-        <!-- Resultado total -->
-        <h3>Total: <span id="total_general">$0</span></h3>
-
-        <!-- Botón de compra -->
-        <button type="submit">Realizar Compra</button>
     </div>
 </section>
 
+<script src="script.js"></script>
+
+</body>
 </html>
