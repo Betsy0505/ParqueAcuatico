@@ -1,59 +1,41 @@
 <?php
+// Configuración básica
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 
-// Configuración de la base de datos
-$servername = "localhost";
-$username = "root"; // Usuario por defecto en XAMPP
-$password = ""; // Contraseña por defecto en XAMPP
-$dbname = "parque_aventura";
-
-// Obtener datos del POST
-$data = json_decode(file_get_contents('php://input'), true);
-
-try {
-    // Crear conexión
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Preparar SQL
-    $stmt = $conn->prepare("INSERT INTO reservaciones (
-        adultos, ninos, sillas, mesas, sombrillas, 
-        espacio_campamento, renta_campamento_4, renta_campamento_8, 
-        renta_campamento_12, cabana_4, cabana_6, total
-    ) VALUES (
-        :adultos, :ninos, :sillas, :mesas, :sombrillas, 
-        :espacio_campamento, :renta_campamento_4, :renta_campamento_8, 
-        :renta_campamento_12, :cabana_4, :cabana_6, :total
-    )");
-
-    // Bind parameters
-    $stmt->bindParam(':adultos', $data['adultos']);
-    $stmt->bindParam(':ninos', $data['ninos']);
-    $stmt->bindParam(':sillas', $data['sillas']);
-    $stmt->bindParam(':mesas', $data['mesas']);
-    $stmt->bindParam(':sombrillas', $data['sombrillas']);
-    $stmt->bindParam(':espacio_campamento', $data['espacio_campamento']);
-    $stmt->bindParam(':renta_campamento_4', $data['renta_campamento_4']);
-    $stmt->bindParam(':renta_campamento_8', $data['renta_campamento_8']);
-    $stmt->bindParam(':renta_campamento_12', $data['renta_campamento_12']);
-    $stmt->bindParam(':cabana_4', $data['cabana_4']);
-    $stmt->bindParam(':cabana_6', $data['cabana_6']);
-    $stmt->bindParam(':total', $data['total']);
-
-    // Ejecutar
-    $stmt->execute();
-
-    echo json_encode([
-        'exito' => true,
-        'mensaje' => 'Reservación guardada correctamente'
-    ]);
-
-} catch(PDOException $e) {
-    echo json_encode([
-        'exito' => false,
-        'mensaje' => 'Error al guardar: ' . $e->getMessage()
-    ]);
+// Validar método
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    die(json_encode(['error' => 'Solo se acepta POST']));
 }
 
-$conn = null;
+// Obtener datos (para POST raw JSON)
+$input = json_decode(file_get_contents('php://input'), true);
+
+// Si viene como form-data
+if (empty($input)) {
+    $input = $_POST;
+}
+
+// Validar datos requeridos
+if (empty($input['adultos'])) {
+    http_response_code(400);
+    die(json_encode(['error' => 'Faltan datos requeridos']));
+}
+
+// SIMULACIÓN DE BASE DE DATOS (elimina esto cuando tengas MySQL configurado)
+$response = [
+    'success' => true,
+    'message' => 'Datos recibidos (modo simulación)',
+    'data' => $input
+];
+
+// En producción, reemplaza lo anterior con tu conexión MySQL real:
+/*
+$pdo = new PDO('mysql:host=localhost;dbname=parque_aventura', 'root', '');
+$stmt = $pdo->prepare("INSERT INTO reservaciones (...) VALUES (...)");
+$stmt->execute([...]);
+*/
+
+echo json_encode($response);
 ?>
